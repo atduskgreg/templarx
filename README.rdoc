@@ -1,0 +1,19 @@
+==Templarx
+
+Acts as an extremely primitive controller for the Archaeopteryx probabilistic steop sequencer:
+
+http://wiki.github.com/gilesbowkett/archaeopteryx
+
+To use, get Arx to play music. This tutorial is helpful:
+
+http://gilesbowkett.blogspot.com/2008/01/drive-propellerhead-reason-with-ruby.html
+
+Then, with a copy of eval_style.rb that includes a reference to db_drum_definition.rb running, do this elsewhere:
+
+    t = Templarx.new :definition_path => "~/path/to/arx/db_drum_definition.rb"
+    t.default_probability = 0.4
+    t.rewrite_drum_definition
+    
+All it does is replace all the 16th note probabilities with the value you pass in.
+
+More in the future. Watch this space.
