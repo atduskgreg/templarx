@@ -4,8 +4,8 @@ $measures = 4
 
 probabilities = {}
 
-<% probabilities.each do |k,v| %>
-  probabilities[<%= 36 + k %>] = <%= v.sort.collect{|a| a.last}.inspect %>
+<% probabilities.each_with_index do |ps, i| %>
+  probabilities[<%= 36 + i %>] = <%= ps.inspect %>
 <% end %>
 
 def note(midi_note_number)
